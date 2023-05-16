@@ -1,0 +1,25 @@
+date,time_range,class_name,coach_name
+2023-01-21, 10:00-11:00,crossfit,andres
+2023-01-22, 10:00-11:00,yoga,ben
+2023-01-22, 12:00-13:00,pilates,menashe
+2023-01-23, 10:00-11:00,crossfit,andres
+2023-01-24, 10:00-11:00,yoga,ben
+2023-01-24, 15:00-16:00,pilates,andres
+2023-01-24, 12:00-13:00,pilates,menashe
+2023-01-25, 15:00-16:00,crossfit,andres
+2023-01-25, 10:00-11:00,pilates,andres
+2023-01-25, 12:00-15:00,yoga,andres
+2023-01-26, 10:00-11:00,crossfit,andres
+2023-01-26, 17:00-18:00,pilates,andres
+2023-01-26, 12:00-13:00,yoga,andres
+2023-01-28, 12:00-13:00,yoga,andres
+2023-01-28, 10:00-11:00,crossfit,andres
+2023-01-28, 17:00-18:00,pilates,andres
+2023-01-29, 10:00-11:00,yoga,ben
+2023-01-29, 12:00-13:00,pilates,menashe
+2023-01-29, 15:00-16:00,pilates,andres
+2023-01-30, 10:00-11:00,crossfit,andres
+2023-01-30, 12:00-13:00,yoga,andres
+2023-01-31, 12:00-13:00,pilates,menashe
+2023-01-31, 10:00-11:00,yoga,ben
+2023-01-31, 15:00-16:00,pilates,andres

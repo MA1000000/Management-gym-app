@@ -1,0 +1,47 @@
+MDScreen:
+    name: "my_account_screen"
+    first_n_last_name: first_n_last_name
+    user_email: user_email
+
+
+    MDIconButton:
+        icon: "chevron-left"
+        user_font_size: "40sp"
+        pos_hint:  {"center_x": .1,"center_y":.92}
+        icon_size: "45sp"
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "main_screen"
+
+    MDLabel:
+        text: "Your Information: "
+        #font_name: bold
+        font_size:"26sp"
+        pos_hint: {"center_x":.6,"center_y":.80}
+        color: rgba(127,127,127,255)
+    MDCard:
+        size_hint: None, None
+        size: root.width*0.85, 0.4*root.height
+        pos_hint: {"center_x":0.5, "center_y":0.55}
+        elevation:2
+        padding:25
+        spacing:2
+        orientation:'vertical'
+
+
+        MDLabel:
+            id: first_n_last_name
+            text: ""
+            font_size:"18sp"
+            pos_hint: {"center_x":.45,"center_y":.1}
+            color: rgba(80,80,80,255)
+
+        MDLabel:
+            id: user_email
+            text: ""
+            font_size:"18sp"
+            pos_hint: {"center_x":.45,"center_y":.1}
+            color: rgba(80,80,80,255)
+
+
+

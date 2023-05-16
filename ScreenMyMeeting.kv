@@ -1,0 +1,27 @@
+MDScreen:
+    name: "screen_my_meeting"
+    future_meetings: future_meetings
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDIconButton:
+            icon: "chevron-left"
+            user_font_size: "40sp"
+            pos_hint:  {"center_x": .1,"center_y":.92}
+            icon_size: "45sp"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main_screen"
+
+        ScrollView:
+            MDList:
+                id: future_meetings
+
+
+
+
+
+
+
+

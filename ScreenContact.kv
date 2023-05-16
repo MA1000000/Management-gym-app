@@ -1,0 +1,64 @@
+MDScreen:
+    name: "contact_screen"
+
+    MDIconButton:
+        icon: "chevron-left"
+        user_font_size: "40sp"
+        pos_hint:  {"center_x": .1,"center_y":.92}
+        icon_size: "45sp"
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "main_screen"
+
+    MDLabel:
+        text: "Stay in Touch "
+        #font_name: bold
+        font_size:"26sp"
+        pos_hint: {"center_x":.6,"center_y":.80}
+        color: rgba(127,127,127,255)
+    MDCard:
+        size_hint: None, None
+        size: root.width*0.85, 0.4*root.height
+        pos_hint: {"center_x":0.5, "center_y":0.55}
+        elevation:2
+        padding:25
+        spacing:2
+        orientation:'vertical'
+
+        MDLabel:
+            text: "OUR OFFICE"
+            font_size:"21sp"
+            pos_hint: {"center_x":.45,"center_y":.1}
+            color: rgba(80,80,80,255)
+        MDLabel:
+            text: "Phone number:"
+            font_size:"18sp"
+            pos_hint: {"center_x":.45,"center_y":.1}
+            color: rgba(127,127,127,255)
+        MDTextButton:
+            text: "02-555-5555"
+            font_size:"18sp"
+            pos_hint: {"center_x":.17,"center_y":.90}
+            color: 0,0,0,1
+        MDLabel:
+            text: "Email:"
+            font_size:"18sp"
+            pos_hint: {"center_x":.45,"center_y":.1}
+            color: rgba(127,127,127,255)
+        MDTextButton:
+            text: "bam@gmail.com"
+            font_size:"18sp"
+            pos_hint: {"center_x":.24,"center_y":.90}
+            color: 0,0,0,1
+
+        MDLabel:
+            text: "Address:"
+            font_size:"18sp"
+            pos_hint: {"center_x":.45,"center_y":.1}
+            color: rgba(127,127,127,255)
+        MDTextButton:
+            text: "Yeda Am 21, Ramat Gan"
+            font_size:"18sp"
+            pos_hint: {"center_x":.35,"center_y":.90}
+            color: 0,0,0,1
+

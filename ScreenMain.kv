@@ -1,0 +1,109 @@
+MDScreen:
+    name: "main_screen"
+
+
+    RelativeLayout:
+        md_bg_color: 0,0,0,1
+
+        FitImage:
+            source:'images/main_pic_one.jpeg'
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+
+        MDFloatLayout:
+
+
+            MDIconButton:
+                icon: "account-box-outline"
+                icon_size: "64sp"
+                pos_hint: {"center_x": .25, "center_y": .15}
+                theme_icon_color: "Custom"
+                icon_color: "white"
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "my_account_screen"
+            MDLabel:
+                id: my_account-label
+                text: "My Account"
+                pos_hint:  {"center_x": .6, "center_y":.08}
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                font_size: "18sp"
+
+            MDIconButton:
+                icon: "file-phone-outline"
+                icon_size: "64sp"
+                pos_hint: {"center_x": .25, "center_y": .37}
+                theme_icon_color: "Custom"
+                icon_color: "white"
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "contact_screen"
+            MDLabel:
+                id: my_account-label
+                text: "Contact"
+                pos_hint:  {"center_x": .65, "center_y":.3}
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                font_size: "18sp"
+
+            MDIconButton:
+                icon: "arm-flex-outline"
+                icon_size: "64sp"
+                pos_hint: {"center_x": .75, "center_y": .37}
+                theme_icon_color: "Custom"
+                icon_color: "white"
+                on_release:
+                    root.manager.transition.direction = "left"
+                    app.book_a_lesson()
+                    root.manager.current = "screen_add_meeting"
+
+            MDLabel:
+                id: my_account-label
+                text: "Book A Class"
+                pos_hint:  {"center_x": 1.09, "center_y":.3}
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                font_size: "18sp"
+
+            MDIconButton:
+                icon: "calendar-plus-outline"
+                icon_size: "64sp"
+                pos_hint: {"center_x": .75, "center_y": .15}
+                theme_icon_color: "Custom"
+                icon_color: "white"
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "screen_my_meeting"
+            MDLabel:
+                id: my_account-label
+                text: "My Meetings"
+                pos_hint:  {"center_x": 1.09, "center_y":.08}
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                font_size: "18sp"
+
+
+
+
+
+    MDTopAppBar:
+        id:TopAppBar
+        md_bg_color: 1, 1, 1, 1
+        specific_text_color: 0, 0, 0, 1
+        pos_hint: {"top": 1}
+        elevation: 1
+        title: "B.A.M Fitness"
+        right_action_items: [["phone",lambda x: app.phone_message()  ,"Contact Us"],["map-marker-multiple",lambda x: app.location_message()]]
+
+
+
+
+
+
+
+
+
+
+
+

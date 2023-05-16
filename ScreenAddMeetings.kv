@@ -1,0 +1,56 @@
+MDScreen:
+    name: "screen_add_meeting"
+    MDBoxLayout:
+        orientation: "vertical"
+        MDIconButton:
+            icon: "chevron-left"
+            user_font_size: "40sp"
+            pos_hint:  {"center_x": .1,"center_y":.92}
+            icon_size: "45sp"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main_screen"
+
+        MDScrollView:
+
+            MDGridLayout:
+                id: box
+                cols: 1
+                adaptive_height: True
+
+
+<Content>
+    adaptive_height: True
+    orientation: "vertical"
+
+    ThreeLineIconListItem:
+        text: root.first_1st_text
+        secondary_text: root.second_1st_text+ '      ' + root.second_1st_text_2
+        tertiary_text:  'Coach Name:    ' + root.tertiary_1st_text
+        on_release:
+            root.book_lesson(self.secondary_text)
+        IconLeftWidget:
+            icon: 'calendar-plus'
+
+
+    ThreeLineIconListItem:
+        id:2nd
+        text: root.first_2nd_text
+        secondary_text: root.second_2nd_text + '      ' +root.second_2nd_text_2
+        tertiary_text: 'Coach Name:    ' + root.tertiary_2nd_text
+        on_release:
+            root.book_lesson(self.secondary_text)
+        IconLeftWidget:
+            icon: 'calendar-plus'
+
+    ThreeLineIconListItem:
+        id:3rd
+        text:root.first_3rd_text
+        secondary_text:root.second_3rd_text + '      ' + root.second_3rd_text_2
+        tertiary_text: 'Coach Name:    '+root.tertiary_3rd_text
+        on_release:
+            root.book_lesson(self.secondary_text)
+        IconLeftWidget:
+            icon: 'calendar-plus'
+
+

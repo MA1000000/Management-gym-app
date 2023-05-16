@@ -1,0 +1,93 @@
+MDScreen:
+    name: "screen_log_in"
+
+    MDFloatLayout:
+        id: log_in_layout
+        md_bg_color:1,1,1,1
+
+
+        MDLabel:
+
+            text: "welcome!"
+            #font_name: bold
+            font_size:"24sp"
+            pos_hint: {"center_x":.59,"center_y":.86}
+            color: rgba(100,100,100,255)
+
+        MDLabel:
+            text: "Log in to continue"
+            #font_name: bold
+            font_size:"18sp"
+            pos_hint: {"center_x":.59,"center_y":.76}
+            color: rgba(100,100,100,255)
+
+        MDTextField:
+            id : email_input_login
+            hint_text: "Email"
+
+
+            helper_text: "example@gmail.com"
+            helper_text_mode: "persistent"
+            icon_right: "email"
+            size_hint_x: .85
+            pos_hint: {"center_x":.5,"center_y":.65}
+            font_size: "14sp"
+            cursor_width: "2sp"
+
+            multiline: False
+            line_color_normal:[0,0,0,1]
+            line_color_focus: [0,0,0,1]
+
+        MDTextField:
+            id : password_input_login
+            hint_text: "Password"
+            icon_right: "key"
+
+            size_hint_x: .85
+            pos_hint: {"center_x":.5,"center_y":.52}
+            font_size: "14sp"
+            cursor_width: "2sp"
+
+            password: True
+            multiline: False
+            line_color_focus:0,0,0,1
+
+        MDRoundFlatButton:
+            text: "LOG-IN"
+            size_hint: .65, .01
+            pos_hint: {"center_x": .47,"center_y": .34}
+            line_color: 0, 0, 0, 1
+            text_color: "black"
+            font_size: "20sp"
+
+            on_release:
+                app.get_log_in_data(email_input_login.text,password_input_login.text)
+
+        MDRoundFlatButton:
+            text: "JOIN US"
+            size_hint: .65, .065
+            pos_hint: {"center_x": .47,"center_y": .25}
+            line_color: 0, 0, 0, 1
+            text_color: "black"
+            font_size: "20sp"
+            bold: True
+
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "screen_sign_up"
+
+
+        MDLabel:
+            text: "Dont have an account?"
+            #font_name: "bold"
+            font_size: "11sp"
+            pos_hint: {"center_x":.68, "center_y":.04}
+            color: rgba(127,127,127,255)
+        MDTextButton:
+            text: "Sign up"
+            font_size: "11sp"
+            pos_hint: {"center_x":.75, "center_y":.04}
+            color: 0,0,0,1
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "screen_sign_up"
